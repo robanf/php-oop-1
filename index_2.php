@@ -50,6 +50,10 @@ var_dump($filmA);
 
 $scontofatto=$filmA->sconto($filmA->costoBiglietto);
 
+foreach ($filmA as $key => $item) {
+    echo "$key => $item <br>"; 
+    
+}
+/* ho fatto il var dump per vedere il fatto che lo sconto entra dentro gli oggetti */
+var_dump($filmA);
 
-
-echo $scontofatto;
