@@ -48,6 +48,8 @@ $filmA->setDurata('1:30');
 $filmA->setCosto(14);
 var_dump($filmA);
 
-$scontofatto=$filmA->sconto($filmA->getCosto());
+$scontofatto=$filmA->sconto($filmA->costoBiglietto);
 
-var_dump($scontofatto);
+
+
+echo $scontofatto;
