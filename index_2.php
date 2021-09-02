@@ -41,19 +41,28 @@ class Movie{
 }
 
 $filmA= new Movie('signore degli agnelli','franco il macellaio');
+$filmB= new Movie('tutti belli', 'mario biondi');
 var_dump($filmA);
 
 $filmA->setDurata('1:30');
+$filmB->setDurata('2:30');
 
 $filmA->setCosto(14);
+$filmB->setCosto(30);
 var_dump($filmA);
 
-$scontofatto=$filmA->sconto($filmA->costoBiglietto);
+$filmA->sconto($filmA->costoBiglietto);
+$filmB->sconto($filmA->costoBiglietto);
 
 foreach ($filmA as $key => $item) {
     echo "$key => $item <br>"; 
     
 }
+echo '<br>';
+foreach ($filmB as $key => $item) {
+    echo "$key => $item <br>"; 
+    
+}
 /* ho fatto il var dump per vedere il fatto che lo sconto entra dentro gli oggetti */
-var_dump($filmA);
+var_dump($filmB);
 
